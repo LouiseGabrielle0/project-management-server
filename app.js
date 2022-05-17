@@ -15,10 +15,10 @@ const app = express();
 require("./config")(app);
 
 // 👇 Start handling routes here
- 
 app.use("/api", require("./routes/index.routes"));
 app.use("/api", require("./routes/project.routes"));
 app.use("/api", require("./routes/task.routes"));
+
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
